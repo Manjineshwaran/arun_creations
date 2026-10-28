@@ -1,0 +1,343 @@
+.social-page {
+  padding-bottom: 2.75rem;
+}
+
+.social-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.25rem;
+  align-items: center;
+  padding: 2.75rem 0 2.25rem;
+}
+
+.social-copy h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 12ch;
+}
+
+.social-copy h1 span {
+  display: block;
+  color: var(--ink);
+}
+
+.social-lead {
+  margin-top: 1.1rem;
+  max-width: 34ch;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.info-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.75rem;
+}
+
+/* —— Mock social visual —— */
+.social-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.mock-stage {
+  position: relative;
+  width: min(100%, 380px);
+  aspect-ratio: 1;
+  border-radius: 1.5rem;
+  background: linear-gradient(160deg, #ebe6ff 0%, #f4f1ff 50%, #eef6ff 100%);
+  overflow: hidden;
+}
+
+.mock-post {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 68%;
+  background: #fff;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.14);
+  animation: riseSoft 0.8s ease both;
+}
+
+.mock-post-media {
+  position: relative;
+  height: 108px;
+  background: linear-gradient(135deg, #ddd6fe, #bfdbfe);
+  overflow: hidden;
+}
+
+.mock-blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mock-blob-a {
+  width: 70%;
+  height: 90%;
+  top: -10%;
+  left: -15%;
+  background: radial-gradient(circle at 40% 40%, #f9a8d4, #f472b6 70%);
+  opacity: 0.85;
+  animation: floatY 8s ease-in-out infinite;
+}
+
+.mock-blob-b {
+  width: 55%;
+  height: 70%;
+  right: -10%;
+  bottom: -20%;
+  background: radial-gradient(circle at 40% 40%, #a5b4fc, #818cf8 75%);
+  opacity: 0.8;
+  animation: floatY 10s ease-in-out infinite reverse;
+}
+
+.mock-post-body {
+  padding: 0.95rem 1rem 1.1rem;
+}
+
+.mock-post-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.mock-post-sub {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.mock-shop {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.mock-story {
+  position: absolute;
+  top: 11%;
+  left: 9%;
+  width: 5.1rem;
+  height: 5.1rem;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  animation: riseSoft 0.9s ease 0.1s both;
+}
+
+.mock-story-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, #f472b6, var(--purple), #38bdf8) border-box;
+}
+
+.mock-story-label {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.mock-play {
+  position: absolute;
+  right: 11%;
+  bottom: 14%;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  animation: riseSoft 1s ease 0.15s both;
+}
+
+.mock-play-icon {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid var(--purple);
+}
+
+@keyframes riseSoft {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -42%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mock-story,
+.mock-play {
+  animation-name: popIn;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* —— Offerings —— */
+.social-offerings {
+  padding: 0.25rem 0 1.75rem;
+}
+
+.offer-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.offer-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.offer-card:hover {
+  border-color: #d4d0f5;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-num {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.offer-num--pink {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.offer-num--purple {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+
+.offer-num--mint {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.offer-num--blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.offer-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.offer-card p {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mock-post,
+  .mock-story,
+  .mock-play,
+  .mock-blob-a,
+  .mock-blob-b {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .social-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 2.1rem 0 1.75rem;
+  }
+
+  .social-visual {
+    order: -1;
+  }
+
+  .mock-stage {
+    width: min(100%, 320px);
+  }
+
+  .social-copy h1 {
+    max-width: none;
+  }
+
+  .topbar-tag {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-lead {
+    max-width: none;
+  }
+}
