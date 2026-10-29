@@ -100,7 +100,16 @@ function Home() {
           <div className="hero-visual reveal delay-2" aria-hidden="true">
             <div className="visual-stage visual-stage--globe">
               <div className="globe">
-                <div className="globe-sphere" />
+                <div className="globe-sphere">
+                  <div className="globe-engrave-clip">
+                    <div className="globe-engrave-track">
+                      <span>arun creations</span>
+                      <span>arun creations</span>
+                      <span>arun creations</span>
+                      <span>arun creations</span>
+                    </div>
+                  </div>
+                </div>
                 <div className="globe-shine" />
                 <div className="globe-atmosphere" />
               </div>
