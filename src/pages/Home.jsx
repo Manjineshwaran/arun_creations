@@ -98,17 +98,11 @@ function Home() {
           </div>
 
           <div className="hero-visual reveal delay-2" aria-hidden="true">
-            <div className="visual-stage">
-              <span className="orb orb-teal float-a" />
-              <span className="orb orb-sky float-b" />
-              <div className="brand-card">
-                <p className="brand-card-label">YOUR BRAND</p>
-                <h2>
-                  Make a strong first
-                  <br />
-                  impression online.
-                </h2>
-                <span className="creative-chip">CREATIVE</span>
+            <div className="visual-stage visual-stage--globe">
+              <div className="globe">
+                <div className="globe-sphere" />
+                <div className="globe-shine" />
+                <div className="globe-atmosphere" />
               </div>
             </div>
           </div>

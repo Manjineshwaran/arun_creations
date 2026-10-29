@@ -178,86 +178,69 @@
   overflow: hidden;
 }
 
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(0.5px);
+.visual-stage--globe {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(167, 139, 250, 0.35), transparent 55%),
+    linear-gradient(160deg, #ebe7ff 0%, #f3f0ff 55%, #e8eefc 100%);
 }
 
-.orb-teal {
-  width: 42%;
-  height: 42%;
-  top: 12%;
-  left: 10%;
-  background: radial-gradient(circle at 35% 35%, #5eead4, var(--teal) 70%);
-  opacity: 0.95;
-}
-
-.orb-sky {
-  width: 48%;
-  height: 48%;
-  top: 28%;
-  right: 6%;
-  background: radial-gradient(circle at 40% 35%, #bfdbfe, var(--sky) 75%);
-  opacity: 0.9;
-}
-
-.brand-card {
-  position: absolute;
-  left: 50%;
-  bottom: 12%;
-  transform: translateX(-50%);
+.globe {
+  position: relative;
   width: 78%;
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 1.35rem 1.25rem 1.5rem;
-  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.12);
+  aspect-ratio: 1;
 }
 
-.brand-card-label {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--text);
-  margin-bottom: 0.55rem;
+.globe-sphere {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url('/earth-texture.jpg');
+  background-repeat: repeat-x;
+  background-size: 200% 100%;
+  background-position: 0% center;
+  animation: globe-spin 28s linear infinite;
+  box-shadow:
+    inset 28px 0 48px rgba(8, 20, 50, 0.55),
+    inset -12px 0 28px rgba(255, 255, 255, 0.18),
+    inset 0 -18px 36px rgba(8, 20, 50, 0.28),
+    0 22px 48px rgba(79, 70, 229, 0.28);
 }
 
-.brand-card h2 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.35rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+.globe-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.08) 28%,
+    transparent 52%
+  );
+  pointer-events: none;
 }
 
-.creative-chip {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: var(--purple);
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+.globe-atmosphere {
+  position: absolute;
+  inset: -6%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    transparent 62%,
+    rgba(125, 180, 255, 0.28) 72%,
+    transparent 78%
+  );
+  pointer-events: none;
+  filter: blur(1px);
 }
 
-.float-a {
-  animation: floatY 7s ease-in-out infinite;
-}
-
-.float-b {
-  animation: floatY 9s ease-in-out infinite reverse;
-}
-
-@keyframes floatY {
-  0%,
-  100% {
-    transform: translateY(0);
+@keyframes globe-spin {
+  from {
+    background-position: 0% center;
   }
-  50% {
-    transform: translateY(-12px);
+  to {
+    background-position: -200% center;
   }
 }
 
@@ -466,8 +449,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .float-a,
-  .float-b,
+  .globe-sphere,
   .btn-primary,
   .service-item {
     animation: none !important;
